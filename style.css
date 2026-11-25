@@ -1,0 +1,264 @@
+/* Colours: white #ffffff, light grey #f2f2f0, charcoal #222222, terracotta #c8553d */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Top menu */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 12px 10px;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+  font-family: Georgia, serif;
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.menu a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0 12px;
+}
+
+.menu a:hover {
+  color: #c8553d;
+}
+
+/* Home */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("images/hero.jpg") center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-box {
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 10px 0 25px 0;
+}
+
+.small {
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c8553d;
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #222222;
+}
+
+/* Blocks (sections) */
+.block {
+  padding: 80px 20px;
+}
+
+.grey {
+  background-color: #f2f2f0;
+}
+
+.dark {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.block h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+/* About */
+.portrait {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 25px auto;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Work */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+video {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Services: numbered list */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 15px;
+  border-top: 1px solid #dddddd;
+}
+
+.row:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+
+.row:hover {
+  background-color: #f2f2f0;
+}
+
+.num {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #c8553d;
+  width: 70px;
+}
+
+.row-text {
+  flex: 1;
+}
+
+.row-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+
+.row-text p {
+  margin: 0;
+  color: #555555;
+}
+
+.row-price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Contact */
+.two {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.info {
+  flex: 1;
+}
+
+.form {
+  flex: 1;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.form textarea {
+  height: 110px;
+}
+
+/* Footer */
+.foot {
+  background-color: #000000;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Phone screens */
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .two {
+    flex-direction: column;
+  }
+  .row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .num {
+    width: 100%;
+  }
+  video {
+    width: 100%;
+  }
+  .menu a {
+    margin: 0 6px;
+    font-size: 12px;
+  }
+}
